@@ -11,12 +11,24 @@
         android:src="@drawable/epuicon">
     </ImageView>
     <TextView
+        android:textColor="@color/black"
         android:id="@+id/item_textview"
         android:layout_marginStart="10dp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="EPU"/>
+    <TextView
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        android:gravity="end"
+        android:layout_weight="1"
+        android:id="@+id/item_textviewScore"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="EPU">
-
     </TextView>
 </LinearLayout>

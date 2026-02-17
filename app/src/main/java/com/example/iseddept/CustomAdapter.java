@@ -13,11 +13,13 @@ public class CustomAdapter extends BaseAdapter {
     String[] names;
     int[] images;
     Activity Context;
+    String[] scores;
 
-    CustomAdapter(String[] names, int[] images, Activity Context){
+    CustomAdapter(String[] names, int[] images, String[] scores, Activity Context){
         this.names = names;
         this.Context = Context;
         this.images = images;
+        this.scores = scores;
     }
     @Override
     public int getCount() {
@@ -42,8 +44,12 @@ public class CustomAdapter extends BaseAdapter {
         }
         ImageView item_imageview = view.findViewById(R.id.item_imageview);
         TextView item_textview = view.findViewById(R.id.item_textview);
+        TextView item_textviewScore = view.findViewById(R.id.item_textviewScore);
+
+
         item_imageview.setImageResource(images[i]);
         item_textview.setText(names[i]);
+        item_textviewScore.setText(scores[i]);
         return view;
     }
 }
