@@ -40,16 +40,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(username.getText().toString().equals("ali") &&
-                password.getText().toString().equals("123")){
+                        password.getText().toString().equals("123")){
 
                     SharedPreferences.Editor edit = mypref.edit();
                     edit.putBoolean("islogin",true);
                     edit.apply();
-
-
                     Intent MainActivity = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(MainActivity);
-
                 }else{
                     Toast.makeText(LoginActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
                 }

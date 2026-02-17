@@ -25,11 +25,23 @@ import taimoor.sultani.sweetalert2.Sweetalert;
 public class MainActivity extends AppCompatActivity {
 
     MaterialCardView card;
-    MaterialCardView examcard;
+    MaterialCardView examcard,scores;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        scores = findViewById(R.id.scores);
+        scores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ScoreActivity = new Intent(MainActivity.this, ScoreActivity.class);
+                startActivity(ScoreActivity);
+            }
+        });
+
 
         examcard = findViewById(R.id.examcard);
         examcard.setOnClickListener(new View.OnClickListener() {

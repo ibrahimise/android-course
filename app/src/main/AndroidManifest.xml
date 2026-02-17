@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ISEDDept">
         <activity
+            android:name=".ScoreActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
